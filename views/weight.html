@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight</title>
+</head>
+<body>
+    <div class="mainBody">
+        <h1>Unit Converter</h1>
+        <div class="nav">
+            <div><a href="./length.html">Length</a></div>
+            <div class="selectedPageLabel">Weight</div>
+            <div><a href="./temperature.html">Temperature</a></div>
+        </div>
+
+        <form id="myForm" action="/convertWeight" method="get" target="_self">
+            <div class="labelInputField">
+                <label for="value">Enter the weight value to convert</label>
+                <input type="text" name="value" id="value">
+            </div>
+            <div class="labelInputField">
+                <label for="unitFrom">Unit to convert from</label>
+                <select name="unitFrom" id="unitFrom">
+                    <option value="">--Please choose an option--</option>
+                    <option value="milligram">milligram</option>
+                    <option value="kilogram">kilogram</option>
+                    <option value="ounce">ounce</option>
+                    <option value="pound">pound</option>
+                  </select>
+            </div>
+            <div class="labelInputField">
+                <label for="unitTo">Unit to convert to</label>
+                <select name="unitTo" id="unitTo">
+                    <option value="">--Please choose an option--</option>
+                    <option value="milligram">milligram</option>
+                    <option value="kilogram">kilogram</option>
+                    <option value="ounce">ounce</option>
+                    <option value="pound">pound</option>
+                  </select>
+            </div>
+            <button type="submit" class="btnClass">Convert</button>
+        </form>
+        <div id="mainResultDiv" style="display: none;">
+            <div>Result Of your calculation</div>
+            <div id="resultDiv"></div>
+            <button class="btnClass" onclick="resetFunc()">Reset</button>
+        </div>
+    </div>
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

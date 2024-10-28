@@ -1,0 +1,23 @@
+{
+  "name": "unit-converter",
+  "version": "1.0.0",
+  "description": "simple web app for unit converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synchoz/Unit-Converter.git"
+  },
+  "keywords": [
+    "web",
+    "nodejs"
+  ],
+  "author": "dima varo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synchoz/Unit-Converter/issues"
+  },
+  "homepage": "https://github.com/synchoz/Unit-Converter#readme"
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length</title>
+</head>
+
+<body>
+    <div class="mainBody">
+        <h1>Unit Converter</h1>
+        <div class="nav">
+            <div class="selectedPageLabel">Length</div>
+            <div><a href="./weight.html">Weight</a></div>
+            <div><a href="./temperature.html">Temperature</a></div>
+        </div>
+
+        <form id="myForm" action="/convertLength" method="get" target="_self">
+            <div class="labelInputField">
+                <label for="value">Enter the length value to convert</label>
+                <input type="text" name="value" id="value">
+            </div>
+            <div class="labelInputField">
+                <label for="unitFrom">Unit to convert from</label>
+                <select name="unitFrom" id="unitFrom">
+                    <option value="">--Please choose an option--</option>
+                    <option value="foot">foot</option>
+                    <option value="millimeter">millimeter</option>
+                    <option value="centimeter">centimeter</option>
+                    <option value="meter">meter</option>
+                    <option value="kilometer">kilometer</option>
+                    <option value="inch">inch</option>
+                    <option value="yard">yard</option>
+                    <option value="mile">mile</option>
+                  </select>
+            </div>
+            <div class="labelInputField">
+                <label for="unitTo">Unit to convert to</label>
+                <select name="unitTo" id="unitTo">
+                    <option value="">--Please choose an option--</option>
+                    <option value="foot">foot</option>
+                    <option value="millimeter">millimeter</option>
+                    <option value="centimeter">centimeter</option>
+                    <option value="meter">meter</option>
+                    <option value="kilometer">kilometer</option>
+                    <option value="inch">inch</option>
+                    <option value="yard">yard</option>
+                    <option value="mile">mile</option>
+                  </select>
+            </div>
+            <button type="submit" class="btnClass">Convert</button>
+        </form>
+        <div id="mainResultDiv" style="display: none;">
+            <div>Result Of your calculation</div>
+            <div id="resultDiv"></div>
+            <button class="btnClass" onclick="resetFunc()">Reset</button>
+        </div>
+    </div>
+    <script src="/public/js/script.js"></script>
+</body>
+<!-- <script>
+    document.getElementById("myForm").addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const unitTo = document.getElementById('unitTo').value;
+    const unitFrom = document.getElementById('unitFrom').value;
+    const value = document.getElementById('value').value;
+    const form = document.getElementById('myForm');
+    const reqPath = form.getAttribute("action");
+
+    fetch(`${reqPath}?unitFrom=${unitFrom}&unitTo=${unitTo}&value=${value}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('myForm').style.display = 'none';
+            document.getElementById('mainResultDiv').style.display = 'block';
+            const resultDiv = document.getElementById('resultDiv').outerText = data;
+        })
+})
+
+function resetFunc() {
+    document.getElementById('myForm').style.display = 'block';
+    document.getElementById('mainResultDiv').style.display = 'none';
+
+    document.getElementById('unitTo').value = '';
+    document.getElementById('unitFrom').value = '';
+    document.getElementById('value').value = '';
+    document.getElementById('resultDiv').outerText = '';
+}
+</script> -->
+
+</html>
